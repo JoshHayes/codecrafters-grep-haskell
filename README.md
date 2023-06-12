@@ -1,4 +1,4 @@
-![progress-banner](https://codecrafters.io/landing/images/default_progress_banners/grep.png)
+[![progress-banner](https://app.codecrafters.io/progress/grep/65a1c567-6349-46a3-8e37-545765b56027)](https://app.codecrafters.io/users/JoshHayes)
 
 This is a starting point for Haskell solutions to the
 ["Build Your Own grep" Challenge](https://app.codecrafters.io/courses/grep/overview).
