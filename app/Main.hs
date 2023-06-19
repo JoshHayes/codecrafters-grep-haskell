@@ -9,6 +9,9 @@ matchPattern pattern input = do
   if pattern == "\\d"
     then any isDigit input
     else
+      if pattern == "\\w"
+        then any (\c -> isAlphaNum c || c == '_')
+        else error $ "Unhandled pattern: " ++ pattern
       if length pattern == 1
       then head pattern `elem` input
       else error $ "Unhandled pattern: " ++ pattern
