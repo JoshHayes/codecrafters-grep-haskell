@@ -10,11 +10,11 @@ matchPattern pattern input = do
     then any isDigit input
     else
       if pattern == "\\w"
-        then any (\c -> isAlphaNum c || c == '_')
-        else error $ "Unhandled pattern: " ++ pattern
-      if length pattern == 1
-      then head pattern `elem` input
-      else error $ "Unhandled pattern: " ++ pattern
+        then any (\c -> isAlphaNum c || c == '_') input
+        else
+          if length pattern == 1
+            then head pattern `elem` input
+            else error $ "Unhandled pattern: " ++ pattern
 
 main :: IO ()
 main = do
